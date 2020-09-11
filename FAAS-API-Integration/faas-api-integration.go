@@ -26,7 +26,9 @@ func GETAllActiveFacilities() error {
 	}()
 
 	URL := "https://faas-api.delhivery.com/v3/facilities/?page=1&status=active&fields=property_lat,property_long"
-	Token := "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imdscy1wcm9kLXRva2VuIiwidG9rZW5fbmFtZSI6Imdscy1wcm9kLXRva2VuIiwiY2VudGVyIjpbIklORDEyMjAwM0FBQiJdLCJ1c2VyX3R5cGUiOiJORiIsImFwcF9pZCI6MTA0LCJhdWQiOiIuZGVsaGl2ZXJ5LmNvbSIsImZpcnN0X25hbWUiOiJnbHMtcHJvZC10b2tlbiIsInN1YiI6InVtczo6dXNlcjo6YjQ1NzU1NzItM2NmOS0xMWVhLWIzZjgtMDYxZGM5ZDgwNGQ0IiwiZXhwIjoxNjExMjIxMzc2LCJhcHBfbmFtZSI6IkdMUyIsImFwaV92ZXJzaW9uIjoidjIifQ.IsJHzOjL2wCccMgZFtzWTsTzWyMCNHdMPpUYk_2yyBU"
+
+	//Add valid token here to test
+	Token := "Bearer {token}"
 	FAASAPIResponseObj := FAASAPIResponse{}
 
 	StatusCode, Response, err := coralogixlogger.HTTPCall("GET", URL, nil, &Token)
